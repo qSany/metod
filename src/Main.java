@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Потребуется дней:" + calculateDeliveryDays(95));
+        int deliveryDistance = 95;
+        System.out.println("Потребуется дней:" + calculateDeliveryDays(deliveryDistance));
         // Задание 1
         int currentYear = 2021;
         boolean isLeapYear = isLeap(currentYear);
@@ -12,7 +13,6 @@ public class Main {
         }
 
         recommendApplicationVersion();
-        calculateDeliveryDays();
     }
 
     static boolean isLeap(int year) {
@@ -23,6 +23,8 @@ public class Main {
 
     public static void recommendApplicationVersion() {
         int clientDeviceYear = 2015;
+        int deviceYear = 2014;
+        int clientOS = 0;
         if ((clientDeviceYear - deviceYear) > 0 && clientOS == 0) {
             System.out.println("Вы можете скачать облегченную версию приложения");
         } else if ((clientDeviceYear - deviceYear) > 0 && clientOS == 1) {
